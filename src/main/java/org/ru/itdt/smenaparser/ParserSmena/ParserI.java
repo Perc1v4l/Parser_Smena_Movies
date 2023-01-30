@@ -1,8 +1,8 @@
 package org.ru.itdt.smenaparser.ParserSmena;
 
 import org.openqa.selenium.WebDriver;
-import org.ru.itdt.smenaparser.ParserSmena.model.Root;
+import org.ru.itdt.smenaparser.ParserSmena.model.DatesContainer;
 
 public interface ParserI {
-   Root Parse(WebDriver document) throws InterruptedException;
+   DatesContainer Parse(WebDriver document) throws InterruptedException;
 }

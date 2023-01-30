@@ -3,15 +3,24 @@ package org.ru.itdt.smenaparser.ParserSmena.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Хранит информацию о кинотеатре
+ */
 public class Cinema {
+
+    /** Название кинотеатра */
     private final String name;
+
+    /** Адрес кинотеатра */
     private final String address;
-    private final List<Seans> seanses;
+
+    /** Список сенсов */
+    private final List<Session> sessions;
 
     public Cinema(final String name, final String address) {
         this.name = name;
         this.address = address;
-        this.seanses = new ArrayList<>();
+        this.sessions = new ArrayList<>();
     }
 
     public String getName() {
@@ -22,7 +31,7 @@ public class Cinema {
         return address;
     }
 
-    public List<Seans> getSeanses() {
-        return seanses;
+    public List<Session> getSessions() {
+        return sessions;
     }
 }

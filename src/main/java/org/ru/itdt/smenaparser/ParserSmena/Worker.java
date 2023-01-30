@@ -1,7 +1,6 @@
 package org.ru.itdt.smenaparser.ParserSmena;
 
 import org.openqa.selenium.WebDriver;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +21,13 @@ public class Worker {
 
     private void Work() throws InterruptedException {
         final WebDriver driver = loader.GetSourceByPageId();
+
         for (final OnNewData onNewData : onNewDataList) {
             onNewData.OnNewData(this, parser.Parse(driver));
         }
+
         driver.quit();
+
         for (final OnCompleted onCompleted : onCompletedList) {
             onCompleted.OnCompleted(this);
         }

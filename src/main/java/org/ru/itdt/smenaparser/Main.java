@@ -18,7 +18,7 @@ public class Main {
 
     static class NewData implements OnNewData {
         @Override
-        public void OnNewData(final Object sender, final Root list) {
+        public void OnNewData(final Object sender, final DatesContainer list) {
             for (final Date date : list.getDates()) {
                 System.out.println("------------------" + date.getDate() + "------------------");
 
@@ -28,14 +28,14 @@ public class Main {
                     for (final Cinema cinema : movie.getCinemas()) {
                         System.out.println("Кинотеатр: " + cinema.getName() + "\tпо адресу " + cinema.getAddress());
 
-                        for (int i = 0; i < cinema.getSeanses().size(); i++) {
+                        for (int i = 0; i < cinema.getSessions().size(); i++) {
                             if (i % 2 == 0 && i != 0) {
-                                System.out.printf("\nНачало: " + cinema.getSeanses().get(i).getTime() +
-                                        " Цена: " + cinema.getSeanses().get(i).getCost() + "\t");
+                                System.out.printf("\nНачало: " + cinema.getSessions().get(i).getTime() +
+                                        " Цена: " + cinema.getSessions().get(i).getCost() + "\t");
                                 continue;
                             }
-                            System.out.printf("Начало: " + cinema.getSeanses().get(i).getTime() +
-                                    " Цена: " + cinema.getSeanses().get(i).getCost() + "\t");
+                            System.out.printf("Начало: " + cinema.getSessions().get(i).getTime() +
+                                    " Цена: " + cinema.getSessions().get(i).getCost() + "\t");
                         }
                         System.out.println("\n");
                     }

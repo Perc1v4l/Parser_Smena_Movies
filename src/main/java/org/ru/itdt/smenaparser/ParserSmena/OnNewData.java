@@ -1,7 +1,7 @@
 package org.ru.itdt.smenaparser.ParserSmena;
 
-import org.ru.itdt.smenaparser.ParserSmena.model.Root;
+import org.ru.itdt.smenaparser.ParserSmena.model.DatesContainer;
 
 public interface OnNewData {
-    void OnNewData(final Object sender, Root e);
+    void OnNewData(final Object sender, DatesContainer e);
 }
